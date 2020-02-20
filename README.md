@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h3>A simple Login and Sign-up page in RoR.</h3>
+  <br> <b>New User</b> -> first sign-up.
+   <br> then with same email and password, can be logged in
+ <br> <b>Old User</b> -> login with already exists credentials.
