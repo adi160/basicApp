@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
   resources :users, only:[:new, :create]
+  resources :articles
 
   get 'signin', to: 'home#new'
 
   post 'signin', to: 'home#create'
-  get 'welcome', to: 'home#welcome'
+  get 'welcome', to: 'articles#new'
 
   root 'home#home'
 
