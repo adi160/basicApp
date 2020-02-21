@@ -3,10 +3,9 @@ Rails.application.routes.draw do
   resources :users, only:[:new, :create]
   resources :articles
 
-  get 'signin', to: 'home#new'
-
-  post 'signin', to: 'home#create'
-  get 'welcome', to: 'articles#new'
+  get 'signin', to: 'sessions#new'
+  post 'signin', to: 'sessions#create'
+  delete 'signout', to: 'sessions#destroy'
 
   root 'home#home'
 
