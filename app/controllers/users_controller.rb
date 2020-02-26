@@ -10,8 +10,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "successfully created! "
-      redirect_to signin_path
+      redirect_to articles_path
     else
       flash[:alert] = "fill all the details! "
       render 'signup'
