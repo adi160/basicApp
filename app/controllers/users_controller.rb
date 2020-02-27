@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  def signup
-    
-  end
 
   def new
     @user = User.new
@@ -14,13 +11,13 @@ class UsersController < ApplicationController
       flash[:notice] = "successfully created! "
       redirect_to articles_path
     else
-      flash[:alert] = "fill all the details! "
-      render 'signup'
+      flash[:alert] = "fill all the details correctly! "
+      redirect_to new_user_path
     end
   end
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
   end
 end
