@@ -1,3 +1,35 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.page-header{
+ text-align: center;
+ color: #5396ac;
+}
+
+.btn-div{
+  text-align: center;
+}
+
+.signup {
+  text-align: center;
+}
+
+.container{
+  text-align: center;
+}
+
+.well{
+  width:500px;
+  margin: auto;
+}
+
+.well-collapse{
+  padding-left: 10px;
+  font-size: large;
+  background-color: lightcoral;
+}
+
+.card-title{
+  color:lightslategrey;
+}

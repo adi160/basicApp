@@ -1,28 +1,15 @@
-<h1> SignUp page </h1>
-
-<%= form_for :user, url:users_path, class: "signupForm" do |f| %>
-
-  <p>
-  <%= f.label :first_name %></p>
-  <p><%= f.text_field :first_name, class: "shortInput" %> </p>
-
-  <p>
-  <%= f.label :last_name %></p>
-  <p><%= f.text_field :last_name, class: "shortInput" %> </p>
-
-  <p>
-  <%= f.label :email, "Email Address" %></p>
-  <p><%= f.text_field :email, class: "shortInput" %> </p>
-
-  <p>
-  <%= f.label :password %></p>
-  <p><%= f.password_field :password, class: "shortInput" %> </p>
-
-  <p>
-  <%= f.label :password_confirmation, "Confirm Password" %></p>
-  <p><%= f.password_field :password_confirmation, class: "shortInput" %> </p>
-
-  <p>
-  <%= f.submit "Create account", class: "button createAccount" %></p>
-
-<% end %>
+<div class = "page-header">
+  <h1> SignUp page </h1>
+</div>
+<div class = "form">
+  <div class = "well">
+    <%= bootstrap_form_for :user, url:users_path, class: "signupForm" do |f| %>
+      <%= f.text_field :first_name %>
+      <%= f.text_field :last_name %>
+      <%= f.text_field :email %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation %> 
+      <%= f.submit "Create account", :class => "btn btn-default" %></p>
+    <% end %>
+  </div>
+</div>

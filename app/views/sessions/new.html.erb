@@ -1,13 +1,20 @@
-<h1>Login</h1>
-  <p>
-  <%= form_for(:session, url: signin_path) do |f| %></p>
-  <p><%= f.label :Email%></p>
-  <p><%= f.text_field :email %></p>
-  <p><%= f.label :Password%></p>
-  <p><%= f.password_field :password%></p>
-  <p><%= f.submit "Login"%></p>
-<%end%>
+<div class = "page-header">
+  <h1> Login </h1>
+</div>
+<div class = "form">
+  <div class = "well">
+    <%= bootstrap_form_for(:session, url: signin_path) do |f| %>
+      <%= f.text_field :email %>
+      <%= f.password_field :password %>
+      <%= f.submit "Login", :class => "btn btn-default" %>
+    <%end%>
+  </div>
+</div>
+<div class = "signup">
+  <h3> Don't have account? </h3>
+  <div class = "btn-div">
+      <%= link_to 'SignUp', new_user_path, :class => "btn btn-default btn-lg" %>
+  </div>
+</div>
 
-<h3> Don't have account? </h3>
 
-<%= link_to 'SignUp', new_user_path %>

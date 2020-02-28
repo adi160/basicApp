@@ -10,11 +10,14 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
+    <div class="well-collapse">
+      <% flash.each do |type, msg| %>
+        <div>
+          <%= msg %>
+        </div>
+      <% end %>
+    </div>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
