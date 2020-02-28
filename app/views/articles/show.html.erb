@@ -1,8 +1,6 @@
 <div class = "page-header">
-  <h1> Showing Articles </h1>
+  Showing Articles
 </div>
-<div class = "container">
-  <div class = "jumbotron">
     <div class="card text-center">
       <div class = "well">
         <div class="card-body">
@@ -11,9 +9,9 @@
         </div>
       </div>
       <div class="card-footer text-muted">
+      <% if @article.user == current_user %>
         <%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-info" %>
+      <% end %>
         <%= link_to 'Back', articles_path, :class => "btn btn-default " %>
       </div>
     </div>
-  </div>
-<div>

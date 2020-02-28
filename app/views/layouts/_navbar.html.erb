@@ -5,8 +5,8 @@
     </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Article</a></li>
-        <li><a href="#">User</a></li>
+        <li> <%= link_to "Article", articles_path %></li>
+        <li> <%= link_to "User", users_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if !logged_in? %>

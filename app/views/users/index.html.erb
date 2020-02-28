@@ -1,0 +1,21 @@
+<div class = "page-header">
+  Listing Users
+</div>
+<div class="card text-center">
+  <div class = "well">
+    <div class="card-body">
+      <% @user.each do |user| %>
+        <h3 class="card-title">Name: <%= user.first_name.capitalize+" "+ user.last_name %></h3>
+        <p class="card-text">Email: <%= user.email %></p>
+        <p> Articles count:  <%= user.articles.count %></p>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    <%= link_to 'SignUp', new_user_path, :class => "btn btn-default" %>
+    <%= link_to 'back', root_path, :class => "btn btn-default " %>
+  </div>
+
+</div>

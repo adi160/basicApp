@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users, only:[:new, :create]
+  resources :users
   resources :articles
 
   get 'signin', to: 'sessions#new'

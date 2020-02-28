@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+body{
+  background-image: asset-url('back2.jpg');
+  background-size: cover;
+}
+
 .page-header{
  text-align: center;
- color: #5396ac;
+ font-size: 50px;
+ color: white;
 }
 
 .btn-div{
@@ -24,6 +30,10 @@
   margin: auto;
 }
 
+#well-article{
+  margin-bottom: 0px;
+}
+
 .well-collapse{
   padding-left: 10px;
   font-size: large;
@@ -32,4 +42,16 @@
 
 .card-title{
   color:lightslategrey;
+}
+
+.card-text{
+  font-size: 20px;
+}
+
+.card-footer{
+  padding-bottom: 10px;
+}
+
+#page_scroll{
+  margin:0 0;
 }
