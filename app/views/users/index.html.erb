@@ -2,6 +2,7 @@
   Listing Users
 </div>
 <div class="card text-center">
+<%= will_paginate @user, :id => 'page_scroll'%>
   <div class = "well">
     <div class="card-body">
       <% @user.each do |user| %>
@@ -12,6 +13,7 @@
       <% end %>
     </div>
   </div>
+<%= will_paginate @user, :id => 'page_scroll'%>
 
   <div class="card-footer text-muted">
     <%= link_to 'SignUp', new_user_path, :class => "btn btn-default" %>

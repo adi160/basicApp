@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 3)
+    @articles = Article.paginate(page: params[:page], per_page: 3).order(created_at: :desc)
   end
 
   def show
@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-    @article = @article = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def require_same_user
