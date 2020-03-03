@@ -1,0 +1,8 @@
+<div class="card text-left">
+    <div class="card-body">
+        <li><b><%= comment.text %></b> 
+        by:<%= comment.user.first_name.capitalize! %></li>
+        <%= link_to 'Delete', article_comment_path(comment.article,comment), method: :delete, 
+        class: "btn btn-sm", data: { confirm: 'Are you sure?' } %> 
+    </div>
+</div>

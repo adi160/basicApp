@@ -4,19 +4,18 @@
     <div class="card text-center">
       <div class = "well">
         <div class="card-body">
-          <h3 class="card-title">Title: <%= @article.title %></h3>
+          <h3 class="card-title">Title: <b><%= @article.title %></b></h3>
           <p class="card-text">Descriptions: <%= @article.text %></p>
-          <%= bootstrap_form_with model: @user, local: true do |form| %>
-            <%= form.text_area :Comment %>
-            <%= form.submit :comment %>
-          <% end %>
+          <hr>
+          <p class = "text-left"><b> Leave a comment:</b> </p>
+          <%= render @article.comments %>
+          <%= render 'comments/form' %> 
         </div>
       </div>
-      
       <div class="card-footer text-muted">
-      <% if @article.user == current_user %>
-        <%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-info" %>
-      <% end %>
-        <%= link_to 'Back', articles_path, :class => "btn btn-default" %>
-      </div>
+        <% if @article.user == current_user %>
+          <%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-info" %>
+        <% end %>
+          <%= link_to 'Back', articles_path, :class => "btn btn-default" %>
+        </div>
     </div>

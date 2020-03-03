@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   resources :users
-  resources :articles 
-  resources :comments
+  resources :articles do
+    resources :comments
+  end
 
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'

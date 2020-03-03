@@ -9,6 +9,7 @@
         <h3 class="card-title">Name: <%= user.first_name.capitalize+" "+ user.last_name %></h3>
         <p class="card-text">Email: <%= user.email %></p>
         <p> Articles count:  <%= user.articles.count %></p>
+        <p> Comments count:  <%= user.comments.count %></p>
         <hr>
       <% end %>
     </div>

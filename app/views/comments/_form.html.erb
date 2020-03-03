@@ -1,0 +1,7 @@
+<%= bootstrap_form_with scope: :comment, url: article_comments_path(@article), local: true do |form| %>
+
+    <%= form.text_area :text, label:"Comment" %>
+
+    <%= form.submit "comment" %>
+ 
+<% end %>
