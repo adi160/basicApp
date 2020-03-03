@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   before_action :require_user, except: [:index]
+
   def new
+  end
+
+  def edit
   end
   
   def create
@@ -8,6 +12,13 @@ class CommentsController < ApplicationController
     @comment = @article.comments.create(comment_params)
     @comment.user = current_user
     @comment.save
+    redirect_to article_path(@article)
+  end
+
+  def update
+    @article = Article.find(params[:article_id])
+    @comment = @article.comments.find(params[:id])
+    @comment.update(comment_params)
     redirect_to article_path(@article)
   end
 

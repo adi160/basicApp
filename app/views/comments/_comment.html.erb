@@ -1,8 +1,15 @@
 <div class="card text-left">
     <div class="card-body">
+      <div>
         <li><b><%= comment.text %></b> 
-        by:<%= comment.user.first_name.capitalize! %></li>
-        <%= link_to 'Delete', article_comment_path(comment.article,comment), method: :delete, 
-        class: "btn btn-sm", data: { confirm: 'Are you sure?' } %> 
+        by:<%= comment.user.first_name.capitalize! %>
+        <% if comment.user == current_user || comment.article.user == current_user %>
+        <div class="del-icon">
+          <%= link_to raw('<span class="glyphicon glyphicon-pencil"></span>'),'#', class: "btn btn-link" %>
+          <%= link_to raw('<span class="glyphicon glyphicon-remove"></span>'), article_comment_path(comment.article,comment), method: :delete, 
+          class: "btn btn-link", data: { confirm: 'Are you sure?' } %>
+        </div> </li>
+      </div>
+        <% end %>
     </div>
 </div>
