@@ -7,9 +7,9 @@
           <h3 class="card-title">Title: <b><%= @article.title %></b></h3>
           <p class="card-text">Descriptions: <%= @article.text %></p>
           <hr>
-          <p class = "text-left"><b> Leave a comment:</b> </p>
+          <p class = "text-left"> <b> Leave a comment: </b> </p>
           <%= render @article.comments %>
-          <%= render 'comments/form' %> 
+          <%= render 'comments/form' %>
         </div>
       </div>
       <div class="card-footer text-muted">
@@ -17,5 +17,5 @@
           <%= link_to 'Edit', edit_article_path(@article), :class => "btn btn-info" %>
         <% end %>
           <%= link_to 'Back', articles_path, :class => "btn btn-default" %>
-        </div>
+      </div>
     </div>

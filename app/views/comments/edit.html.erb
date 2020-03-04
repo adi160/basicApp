@@ -1,0 +1,4 @@
+<%= bootstrap_form_with(model: [ @article, @comment ], local: true) do |form| %>
+  <%= form.text_area :text, label:"Comment" %>
+  <%= form.submit "comment" %>
+<% end %>

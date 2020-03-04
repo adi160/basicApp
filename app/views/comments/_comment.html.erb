@@ -4,12 +4,13 @@
         <li><b><%= comment.text %></b> 
         by:<%= comment.user.first_name.capitalize! %>
         <% if comment.user == current_user || comment.article.user == current_user %>
-        <div class="del-icon">
-          <%= link_to raw('<span class="glyphicon glyphicon-pencil"></span>'),'#', class: "btn btn-link" %>
-          <%= link_to raw('<span class="glyphicon glyphicon-remove"></span>'), article_comment_path(comment.article,comment), method: :delete, 
-          class: "btn btn-link", data: { confirm: 'Are you sure?' } %>
-        </div> </li>
+          <div class="del-icon">
+            <%= link_to raw('<span class="glyphicon glyphicon-pencil"></span>'),edit_article_comment_path(comment.article,comment), class: "btn btn-link" %>
+            <%= link_to raw('<span class="glyphicon glyphicon-remove"></span>'), article_comment_path(comment.article,comment), method: :delete, 
+            class: "btn btn-link", data: { confirm: 'Are you sure?' } %>
+          </div> 
+        <% end %> 
+        </li>
       </div>
-        <% end %>
     </div>
 </div>
