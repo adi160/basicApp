@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
   delete 'signout', to: 'sessions#destroy'
+  post '/articles/:article_id/likes', to: 'likes#like' , as: 'likes' 
+  post '/articles/:article_id/dislikes', to: 'likes#dislike', as: 'dislikes'
 
   root 'home#home'
 

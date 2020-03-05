@@ -6,6 +6,10 @@
         <div class="card-body">
           <h3 class="card-title">Title: <b><%= @article.title %></b></h3>
           <p class="card-text">Descriptions: <%= @article.text %></p>
+          <%= @article.like %>
+          <%= link_to raw('<span class="glyphicon glyphicon-thumbs-up"></span>'),likes_path(@article), method: :post, class: "btn btn-link btn-lg" %>
+          <%= link_to raw('<span class="glyphicon glyphicon-thumbs-down"></span>'),dislikes_path(@article), method: :post, class: "btn btn-link btn-lg" %>
+          <%= @article.dislike %>  
           <hr>
           <p class = "text-left"> <b> Leave a comment: </b> </p>
           <%= render @article.comments %>

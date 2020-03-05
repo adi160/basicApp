@@ -1,4 +1,13 @@
-<%= bootstrap_form_with(model: [ @article, @comment ], local: true) do |form| %>
-  <%= form.text_area :text, label:"Comment" %>
-  <%= form.submit "comment" %>
-<% end %>
+<div class = "page-header">
+  Edit Comment
+</div>
+<div class="card text-center">
+  <div class = "well">
+    <div class="card-body">
+      <%= bootstrap_form_with(model: [ @article, @comment ], local: true) do |form| %>
+        <%= form.text_area :text, label:"Edit comment" %>
+        <%= form.submit "comment" %>
+      <% end %>
+    </div>
+  </div>
+</div>
