@@ -17,3 +17,60 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron {
+  background:linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(255,128,0,1) 30%, rgba(244,81,30,1) 60%, rgba(255,255,255,1) 95%);
+  color: #fff;
+  padding: 100px 25px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  background-color:black;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: black !important;
+  background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+#lab_social_icon_footer {
+  padding: 40px 0;
+  background-color: black;
+  display: inline-block;
+  width:100%;
+  height:auto;
+}
+
+#lab_social_icon_footer a {
+  color:white;
+  padding-left: 10px;
+}
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+  color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  color: #f39c12;
+}
